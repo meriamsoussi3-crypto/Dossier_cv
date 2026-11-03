@@ -36,7 +36,6 @@
             overflow-x: hidden;
         }
 
-        /* خلفية مضيئة خفيفة */
         .ambient-glow {
             position: absolute;
             top: 0;
@@ -49,14 +48,12 @@
             pointer-events: none;
         }
 
-        /* حاوية رئيسية */
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 40px 20px;
         }
 
-        /* الهيدر والترويسة الشخصية */
         header {
             text-align: center;
             padding: 50px 20px;
@@ -104,7 +101,6 @@
             margin-bottom: 25px;
         }
 
-        /* معلومات التواصل السريعة */
         .quick-contact {
             display: flex;
             justify-content: center;
@@ -115,3 +111,353 @@
         .contact-pill {
             display: inline-flex;
             align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 50px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .contact-pill:hover {
+            background: var(--primary-gold);
+            color: var(--bg-deep);
+            border-color: var(--primary-gold);
+            transform: translateY(-2px);
+        }
+
+        .contact-pill i {
+            color: var(--primary-gold);
+        }
+        .contact-pill:hover i {
+            color: var(--bg-deep);
+        }
+
+        section {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+
+        section:hover {
+            border-color: var(--border-color);
+        }
+
+        h2.section-title {
+            font-size: 1.4rem;
+            color: var(--primary-gold);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            padding-bottom: 12px;
+        }
+
+        h2.section-title i {
+            font-size: 1.2rem;
+        }
+
+        p.bio-text {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+
+        .timeline {
+            position: relative;
+            padding-right: 20px;
+            border-right: 2px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .timeline-item {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            right: -27px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--primary-gold);
+            box-shadow: 0 0 10px var(--primary-gold);
+        }
+
+        .timeline-date {
+            font-size: 0.85rem;
+            color: var(--primary-gold);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .timeline-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .timeline-company {
+            font-size: 0.9rem;
+            color: var(--accent-blue);
+            margin-bottom: 8px;
+        }
+
+        .timeline-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            list-style-type: none;
+        }
+
+        .timeline-desc li {
+            position: relative;
+            padding-right: 15px;
+            margin-bottom: 4px;
+        }
+
+        .timeline-desc li::before {
+            content: "•";
+            position: absolute;
+            right: 0;
+            color: var(--primary-gold);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 15px 20px;
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+        .skill-card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .skill-card h3 {
+            font-size: 1rem;
+            color: var(--text-main);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skill-card h3 i {
+            color: var(--primary-gold);
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tag {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-blue);
+            font-size: 0.8rem;
+            padding: 3px 10px;
+            border-radius: 6px;
+        }
+
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .edu-info h3 {
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+
+        .edu-info p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .edu-year {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--primary-gold);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8rem; }
+            .container { padding: 15px; }
+            section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-glow"></div>
+
+    <div class="container">
+        <!-- الهيدر الشخصي -->
+        <header>
+            <div class="profile-img-container">
+                <!-- تم ربط الصورة باسمها الحالي المرفوع في المستودع -->
+                <img src="1792661530457.jpg" alt="صورة الأستاذة مريم السوسي" class="profile-img">
+            </div>
+            <h1>مريم السوسي <span>إبسة زايد</span></h1>
+            <p class="title">أستاذة ومدربة في الإعلامية والحساب الذهني</p>
+            
+            <div class="quick-contact">
+                <a href="mailto:soussi.meriam@gmail.com" class="contact-pill">
+                    <i class="fas fa-envelope"></i> soussi.meriam@gmail.com
+                </a>
+                <a href="tel:51570806" class="contact-pill">
+                    <i class="fas fa-phone-alt"></i> 51 570 806
+                </a>
+                <div class="contact-pill">
+                    <i class="fas fa-map-marker-alt"></i> بني خيار، نابل
+                </div>
+            </div>
+        </header>
+
+        <!-- النبذة الشخصية -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-user-tie"></i> النبذة المهنية</h2>
+            <p class="bio-text">
+                خريجة في الإعلامية التطبيقية ومدربة شغوفة بالتعليم الحديث. تمتلك خبرة قوية في التربية النشطة، وتنشيط الورشات التفاعلية، والحساب الذهني؛ حيث تجمع بين المهارات التكنولوجية والمواكبة الشخصية لجذب انتباه الطلاب وضمان نجاحهم الأكاديمي.
+            </p>
+        </section>
+
+        <!-- الخبرات المهنية -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> الخبرات المهنية</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2020 - 2023</div>
+                    <div class="timeline-title">مدربة وأستاذة في الحساب الذهني</div>
+                    <ul class="timeline-desc">
+                        <li>إعداد دروس ممتعة وتدريجية تناسب مختلف المستويات.</li>
+                        <li>إدارة المجموعات، وتحفيز التركيز والمنطق المعرفي.</li>
+                        <li>دمج الأدوات المرئية التفاعلية لتسهيل الفهم.</li>
+                        <li>التقييم المستمر للتقدم والمرافقة الفردية للطلاب.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item" style="margin-top: 30px;">
+                    <div class="timeline-date">2015 - 2019</div>
+                    <div class="timeline-title">مساعدة تربوية ودعم رقمي</div>
+                    <div class="timeline-company">شركة الفخار أحمد السوسي</div>
+                    <ul class="timeline-desc">
+                        <li>إنتاج وسائط مرئية وتعليمية جذابة باستخدام برنامج فوتوشوب (Photoshop).</li>
+                        <li>تنظيم قواعد البيانات وهيكلة المحتويات التعليمية.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item" style="margin-top: 30px;">
+                    <div class="timeline-date">03/2012 - 05/2012</div>
+                    <div class="timeline-title">منشطة تربوية (تدريب)</div>
+                    <div class="timeline-company">جمعية القرآن، بني خيار</div>
+                    <ul class="timeline-desc">
+                        <li>تنشيط أنشطة التعلم والإشراف على المتعلمين الصغار.</li>
+                        <li>استخدام الحاسوب لمتابعة الأداء التعليمي.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- المهارات والأدوات -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-tools"></i> المهارات والأدوات الرقمية</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3><i class="fas fa-graduation-cap"></i> المهارات التربوية</h3>
+                    <div class="tags">
+                        <span class="tag">تدريس تفاعلي</span>
+                        <span class="tag">تربية نشطة</span>
+                        <span class="tag">حساب ذهني</span>
+                        <span class="tag">إصغاء وتنشيط</span>
+                        <span class="tag">تبسيط العلوم</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-laptop-code"></i> الأدوات الرقمية</h3>
+                    <div class="tags">
+                        <span class="tag">Photoshop</span>
+                        <span class="tag">PowerPoint</span>
+                        <span class="tag">MS Word/Excel</span>
+                        <span class="tag">E-Learning Tools</span>
+                        <span class="tag">Google Workspace</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-language"></i> اللغات</h3>
+                    <div class="tags">
+                        <span class="tag">العربية (الأم)</span>
+                        <span class="tag">الفرنسية (فصحى/courant)</span>
+                        <span class="tag">الإنجليزية (مهني)</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3><i class="fas fa-star"></i> المميزات المهنية</h3>
+                    <div class="tags">
+                        <span class="tag">طلاقة تواصل</span>
+                        <span class="tag">دقة وتنظيم</span>
+                        <span class="tag">موجهة نحو النتائج</span>
+                        <span class="tag">رخصة سياقة (B)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- المسار الأكاديمي -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-university"></i> المسار الأكاديمي</h2>
+            <div class="edu-item">
+                <div class="edu-info">
+                    <h3>ليسانس في الإعلامية التطبيقية في التصرف</h3>
+                    <p>المدرسة العليا للتجارة الإلكترونية بمنوبة</p>
+                </div>
+                <div class="edu-year">2010</div>
+            </div>
+        </section>
+
+        <!-- التذييل -->
+        <footer>
+            <p>جميع الحقوق محفوظة &copy; 2026 - مريم السوسي إبسة زايد</p>
+        </footer>
+    </div>
+
+</body>
+</html>
